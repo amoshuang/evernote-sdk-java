@@ -21,7 +21,7 @@
 --%>
 <%@ page import='java.util.*' %>
 <%@ page import='java.net.*' %>
-<%@ page import='com.evernote.auth.models.*' %>
+<%@ page import='com.evernote.auth.*' %>
 <%@ page import="com.evernote.clients.NoteStoreClient" %>
 <%@ page import="com.evernote.clients.ClientFactory" %>
 <%@ page import='com.evernote.edam.type.*' %>
@@ -34,8 +34,8 @@
  * Fill in your Evernote API key. To get an API key, go to
  * http://dev.evernote.com/documentation/cloud/
  */
-static final String CONSUMER_KEY = "evernote_dev-7750";
-static final String CONSUMER_SECRET = "31b9568f1ba86361";
+static final String CONSUMER_KEY = "";
+static final String CONSUMER_SECRET = "";
 
 /*
  * Replace this value with EvernoteService.PRODUCTION to switch from the Evernote

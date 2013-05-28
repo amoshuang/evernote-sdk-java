@@ -68,9 +68,21 @@ public class EvernoteAuth {
     }
     this.service = service;
     this.token = token;
-    this.setNoteStoreUrl(extract(rawResponse, NOTESTORE_REGEX));
-    this.webApiUrlPrefix = extract(rawResponse, WEBAPI_REGEX);
-    this.userId = Integer.parseInt(extract(rawResponse, USERID_REGEX));
+    this.setNoteStoreUrl(extractNoteStoreUrl(rawResponse));
+    this.webApiUrlPrefix = extractWebApiUrl(rawResponse);
+    this.userId = Integer.parseInt(extractUserId(rawResponse));
+  }
+  
+  String extractNoteStoreUrl(String response) {
+    return extract(response, NOTESTORE_REGEX);
+  }
+
+  String extractWebApiUrl(String response) {
+    return extract(response, WEBAPI_REGEX);
+  }
+
+  String extractUserId(String response) {
+    return extract(response, USERID_REGEX);
   }
 
   private String extract(String response, Pattern p) {
